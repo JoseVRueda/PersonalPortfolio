@@ -1,0 +1,391 @@
+:root {
+  --background-color: #121212;
+  --secondary-color: #ff5252;
+  --text-color: #e0e0e0;
+  --alternative-color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Styling */
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+
+  /* Font */
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 16px; /* Ancho de la barra */background-color: transparent; /* Fondo transparente para el efecto flotante */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--alternative-color); /* Color del track, puede ser semitransparente */border-radius: 10px; /* Bordes redondeados para el track */margin: 5px; /* Espacio alrededor para el efecto flotante */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--alternative-color); /* Color del thumb */border-radius: 10px; /* Bordes redondeados para el thumb */border: 2px solid rgba(255, 255, 255, 0.3); /* Borde para darle un efecto flotante */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--secondary-color); /* Color más oscuro al hacer clic */
+}
+
+body {
+  /* Defaulting page */
+  margin: 0;
+  padding: 0;
+
+  /* Color */
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  /* Positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  /* Styling */
+}
+
+strong {
+  color: var(--secondary-color);
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  padding: 0 50px 0 50px;
+
+  border-bottom: solid 1px var(--text-color);
+
+  background-color: var(--background-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+a {
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+section {
+  width: 90%;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--text-color);
+  border-radius: 50px;
+}
+
+#welcome-section {
+  margin-top: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+}
+
+#welcome-section h1 {
+  overflow: hidden;
+  border-right: 0.15em solid var(--secondary-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  animation: typing 3.5s steps(20, end), blink-caret 1.5s step-end infinite;
+}
+
+#welcome-section h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+.arrow {
+  width: auto;
+  height: 120px;
+  position: relative;
+  top: 150px;
+  animation: arrow 2s infinite;
+}
+
+#about {
+  flex-direction: column;
+  gap: 15px;
+}
+
+#about h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#about div {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.link:hover, .nav-link:hover {
+  color: var(--alternative-color);
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+  margin: 0 10px 0 10px;
+}
+
+.github {
+  height: 20px;
+}
+
+.linkedin {
+  height: 30px;
+  margin: 0;
+}
+
+.gmail {
+  height: 20px;
+}
+
+#skills {
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#skills ul {
+  list-style: none;
+  margin: 0;
+}
+
+.icons {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons img {
+  width: auto;
+  height: 50px;
+}
+
+#projects {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.project-tile {
+  width: 400px;
+  min-height: 144px;
+  height: auto;
+  padding: 20px;
+  border: solid 1px var(--text-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-tile:hover {
+  background-color: var(--alternative-color);
+}
+
+#certifications {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.certification-list {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  margin-top: 100px;
+
+  border-top: solid 1px var(--text-color);
+
+  font-weight: 300;
+  background-color: var(--background-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#contact div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes arrow {
+  0% {
+    top: 150px;
+  }
+  50% {
+    top: 250px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 583px;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--secondary-color);
+  }
+}
+
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    height: auto;
+    padding: 20px 0 20px 0;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  #welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .arrow {
+    height: 100px;
+  }
+
+  #about h2 {
+    font-size: 1.2rem;
+  }
+
+  #skills h2{
+    font-size: 1.2rem;
+  }
+
+  #projects h2{
+    font-size: 1.2rem;
+  }
+
+  .icons img {
+    height: 40px;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 340px;
+    }
+  }  
+
+}
+
+@media screen and (max-width: 470px) {
+  header {
+    padding: 10x;
+    flex-direction: column;
+  }
+
+  .project-tile {
+    width: 300px;
+  }
+}
